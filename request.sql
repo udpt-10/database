@@ -1,4 +1,4 @@
-drop database requestManager
+--drop database requestManager
 create database requestManager
 use requestManager
 create table [employee] (
@@ -11,13 +11,13 @@ create table [ot_request] (
 	[date] date,
 	[hour] float,
 	[reason] nvarchar(500),
-	[mamager_id] int,
+	[manager_id] int,
 	[is_approved] bit,
 	[approve_reason] nvarchar(500),
 	[approve_date] date
 )
 alter table [ot_request] add CONSTRAINT  ot_request_ FOREIGN KEY ([employee_id]) REFERENCES [employee]([employee_id])
-alter table [ot_request] add CONSTRAINT  approve_ot_ FOREIGN KEY ([mamager_id]) REFERENCES [employee]([employee_id])
+alter table [ot_request] add CONSTRAINT  approve_ot_ FOREIGN KEY ([manager_id]) REFERENCES [employee]([employee_id])
 
 create table [work_from_home_request] (
 	[work_from_home_request_id] int identity primary key,
