@@ -17,7 +17,6 @@ create table [ot_request] (
 	[approve_date] date
 )
 alter table [ot_request] add CONSTRAINT  ot_request_ FOREIGN KEY ([employee_id]) REFERENCES [employee]([employee_id])
-alter table [ot_request] add CONSTRAINT  approve_ot_ FOREIGN KEY ([manager_id]) REFERENCES [employee]([employee_id])
 
 create table [work_from_home_request] (
 	[work_from_home_request_id] int identity primary key,
@@ -40,8 +39,6 @@ create table [leave_request] (
 	[approve_date] date
 )
 alter table [leave_request] add CONSTRAINT  leave_request_ FOREIGN KEY ([employee_id]) REFERENCES [employee]([employee_id])
-alter table [leave_request] add CONSTRAINT  approve_leave_ FOREIGN KEY ([mamager_id]) REFERENCES [employee]([employee_id])
-
 
 create table [support_request] (
 	[support_request_id] int identity primary key,
@@ -59,8 +56,6 @@ create table [support_request] (
 )
 
 alter table [support_request] add CONSTRAINT  support_request_ FOREIGN KEY ([employee_id]) REFERENCES [employee]([employee_id])
-alter table [support_request] add CONSTRAINT  approve_support_manager_ FOREIGN KEY ([approver]) REFERENCES [employee]([employee_id])
-alter table [support_request] add CONSTRAINT  approve_support_director_ FOREIGN KEY ([director_id]) REFERENCES [employee]([employee_id])
 
 create table [general_info] (
 	[general_info_id] int identity primary key,
