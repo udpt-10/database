@@ -1,0 +1,606 @@
+{
+	"info": {
+		"_postman_id": "54ad2aec-ad09-495a-b068-46012e23cd63",
+		"name": "UDPT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18763845"
+	},
+	"item": [
+		{
+			"name": "EmployeeSerive",
+			"item": [
+				{
+					"name": "getAllEmployee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/employee/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"employee",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEmployeeByEmail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "kisibongdem@gmail.com"
+						},
+						"url": {
+							"raw": "localhost:8001/employee/findByEmail",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"employee",
+								"findByEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEmployeeByUserName",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "patien"
+						},
+						"url": {
+							"raw": "localhost:8001/employee/findByUserName",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"employee",
+								"findByUserName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addNewEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeName\": \"Pham Anh Tien\",\r\n    \"userName\": \"Ki si bong dem 5\",\r\n    \"password\": \"123456\",\r\n    \"position\": \"employee\",\r\n    \"leavingDayBalance\": 12,\r\n    \"address\": \"Nguyen Xien Long Thach My Quan 9 HCM\",\r\n    \"phone\": \"123123123\",\r\n    \"email\": \"kisibongdem5@gmail.com\",\r\n    \"dateOfBirth\": \"2000-12-30T17:00:00.000+00:00\",\r\n    \"sex\": true,\r\n    \"informationSummary\": \"\",\r\n    \"director\": 1,\r\n    \"manager\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/employee/addNewEmployee",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"employee",
+								"addNewEmployee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeName\": \"Pham Anh Tien\",\r\n    \"userName\": \"Ki si bong dem 1\",\r\n    \"password\": \"123456\",\r\n    \"position\": \"employee\",\r\n    \"leavingDayBalance\": 12,\r\n    \"address\": \"Haha cho khanh\",\r\n    \"phone\": \"123123123\",\r\n    \"email\": \"kisibongdem1@gmail.com\",\r\n    \"dateOfBirth\": \"2000-12-30T17:00:00.000+00:00\",\r\n    \"sex\": false,\r\n    \"informationSummary\": \"\",\r\n    \"director\": 1,\r\n    \"manager\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/employee/editEmployee",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"employee",
+								"editEmployee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "Ki si bong dem 1"
+						},
+						"url": {
+							"raw": "localhost:8001/employee/deleteEmployee",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"employee",
+								"deleteEmployee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Ki si bong dem 5\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/employee/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"employee",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RequestService",
+			"item": [
+				{
+					"name": "OT",
+					"item": [
+						{
+							"name": "getAllOTRequest",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/OTRequest/all",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"OTRequest",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addNewOTRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"employeeId\":\"9\",\r\n    \"date\": \"2022-08-23\",\r\n    \"hour\": \"8\",\r\n    \"reason\": \"Buồn quá không muốn làm\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/OTRequest/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"OTRequest",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllOTRequestByEmployeeId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/OTRequest/9",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"OTRequest",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otRequestId\": 1,\r\n    \"employeeId\": 9,\r\n    \"date\": \"2022-08-22T17:00:00.000+00:00\",\r\n    \"hour\": 8.0,\r\n    \"reason\": \"Buồn quá không muốn làm\",\r\n    \"managerId\": 1,\r\n    \"isApproved\": 1,\r\n    \"approveReason\": \"Thôi cho nó nghỉ Khánh nó đang thất tình\",\r\n    \"approveDate\": \"2022-08-22\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/OTRequest/edit",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"OTRequest",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAnOTRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "2",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/OTRequest/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"OTRequest",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "AddNewEmployee",
+					"item": [
+						{
+							"name": "addNewEmployee",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "1",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/employee/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"employee",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Leave",
+					"item": [
+						{
+							"name": "getAllLeaveRequest",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/LeaveRequest/all",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"LeaveRequest",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addNewLeaveRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"employeeId\":\"9\",\r\n    \"date\": \"2022-08-23\",\r\n    \"hour\": \"8\",\r\n    \"reason\": \"Hôm qua Khánh đi đái ở vũng tàu bị cua cắp chim nên đi bó chim rồi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/LeaveRequest/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"LeaveRequest",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllLeaveByEmployeeId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/LeaveRequest/9",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"LeaveRequest",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"leaveRequestId\": 1,\r\n    \"employeeId\": 9,\r\n    \"date\": \"2022-08-22T17:00:00.000+00:00\",\r\n    \"hour\": 8.0,\r\n    \"reason\": \"Hôm qua Khánh thất tình chạy qua vũng tàu đái giờ mệt ko đi làm được\",\r\n    \"managerId\": 1,\r\n    \"isApproved\": 0,\r\n    \"approveReason\": \"Đéo cho nó nghỉ, động tý thất tình mai tụi nó lại quay lại ngay giờ\",\r\n    \"approveDate\": \"2022-08-23\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/LeaveRequest/edit",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"LeaveRequest",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAnLeaveRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "2",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/LeaveRequest/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"LeaveRequest",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "WFH",
+					"item": [
+						{
+							"name": "getAllWFHRequest",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/WorkFromHome/all",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"WorkFromHome",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addNewWHFRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"employeeId\": 9,\r\n    \"date\": \"2022-08-25\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/WorkFromHome/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"WorkFromHome",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllWFHRequestByEmployeeId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/WorkFromHome/9",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"WorkFromHome",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"workFromHomeRequestId\": 1,\r\n    \"employeeId\": 9,\r\n    \"date\": \"2022-08-23T17:00:00.000+00:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/WorkFromHome/edit",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"WorkFromHome",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAWFHRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "2",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/WorkFromHome/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"WorkFromHome",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
