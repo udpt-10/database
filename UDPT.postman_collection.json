@@ -180,6 +180,14 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getAllManager",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			]
 		},
@@ -595,6 +603,93 @@
 										"delete"
 									]
 								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GeneralInfo",
+					"item": [
+						{
+							"name": "GetAllGeneralInfo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/GeneralInfo/all",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"GeneralInfo",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addNewGeneral",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/GeneralInfo/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"GeneralInfo",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getGeneralInfoById",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "edit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"generalInfoId\": 2,\r\n        \"title\": \"Làm sao để có người yêu\",\r\n        \"describe\": \"Mở rộng mối quan hệ Việc sống khép kín sẽ khiến bạn khó tìm được một nửa của cuộc đời mình. Vậy thì tại sao lại không mở rộng thêm các mối quan hệ của mình. Bạn có thể tiếp xúc với nhiều bạn mới bằng cách tham gia các câu lạc bộ hoặc một khóa học kỹ năng mà bạn yêu thích. Như vậy sẽ tạo điều kiện thuận lợi cho bạn gặp gỡ với nhiều người mới hơn. Và biết đâu trong số những người mà bạn mới quen trong những câu lạc bộ, khóa học đó lại là một nửa của cuộc đời bạn sau này. Đây là cách để bạn tìm được người yêu nhanh chóng. Không chỉ vậy còn giúp bạn tự tin hơn về bản thân, không có những suy nghĩ tiêu cực. \",\r\n        \"author\": 1,\r\n        \"date\": \"2022-08-25T17:00:00.000+00:00\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/GeneralInfo/edit",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"GeneralInfo",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
 							},
 							"response": []
 						}
