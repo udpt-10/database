@@ -109,7 +109,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"employeeName\": \"Pham Anh Tien\",\r\n    \"userName\": \"Ki si bong dem 1\",\r\n    \"password\": \"123456\",\r\n    \"position\": \"employee\",\r\n    \"leavingDayBalance\": 12,\r\n    \"address\": \"Haha cho khanh\",\r\n    \"phone\": \"123123123\",\r\n    \"email\": \"kisibongdem1@gmail.com\",\r\n    \"dateOfBirth\": \"2000-12-30T17:00:00.000+00:00\",\r\n    \"sex\": false,\r\n    \"informationSummary\": \"\",\r\n    \"director\": 1,\r\n    \"manager\": 1\r\n}",
+							"raw": "{\r\n    \"employeeName\": \"Pham Anh Tien\",\r\n    \"userName\": \"Ki si bong dem 2\",\r\n    \"password\": \"123456\",\r\n    \"position\": \"manager\",\r\n    \"leavingDayBalance\": 12,\r\n    \"address\": \"Haha cho khanh\",\r\n    \"phone\": \"123123123\",\r\n    \"email\": \"kisibongdem2@gmail.com\",\r\n    \"dateOfBirth\": \"2000-12-30T17:00:00.000+00:00\",\r\n    \"sex\": false,\r\n    \"informationSummary\": \"\",\r\n    \"director\": 1,\r\n    \"manager\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -185,7 +185,18 @@
 					"name": "getAllManager",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/employee/manager",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"employee",
+								"manager"
+							]
+						}
 					},
 					"response": []
 				}
@@ -635,6 +646,15 @@
 							"request": {
 								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Làm sao để có người yêu\",\r\n    \"describe\": \"1. Cách làm việc hiệu quả: Gắn bó với quy trình, không phải mục tiêu Ví dụ, không chỉ đặt ra mục tiêu là cải thiện mối quan hệ khách hàng mà bạn còn cần cam kết gọi điện cho ít nhất hai khách hàng mỗi ngày. Không chỉ đặt ra mục tiêu tìm được khách hàng mới; mà bạn còn liên lạc với ít nhất hai khách hàng tiềm năng mỗi ngày. Một quá trình nỗ lực liên tục mới dẫn bạn đến mục tiêu và bạn có rất nhiều khả năng để đạt được mục tiêu đó. Tập trung vào những gì bạn sẽ làm được, không phải vào những gì bạn mơ ước. 2. Làm khó chính mình Đây là một kỹ thuật tâm lý khá hiệu quả: khi một thứ gì đó quá khó để làm, bạn sẽ làm điều đó ít lại, hoặc không làm. Hãy trữ nước ngọt trong tủ lạnh và đặt chai nước khoáng ngay trên bàn làm việc, đặt TV ở xa chỗ làm việc, đừng cố vào Facebook bằng cách vượt tường lửa, tắt các ứng dụng chat, để điện thoại chế độ silent… Sự thuận tiện sẽ khiến bạn phân tâm, do đó làm khó bản thân để tránh xa những “cám dỗ” của môi trường xung quanh.\",\r\n    \"author\": 1,\r\n    \"date\": \"2022-08-26\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "localhost:8002/GeneralInfo/add",
 									"host": [
@@ -653,7 +673,18 @@
 							"name": "getGeneralInfoById",
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/GeneralInfo/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"GeneralInfo",
+										"1"
+									]
+								}
 							},
 							"response": []
 						},
@@ -688,8 +719,196 @@
 						{
 							"name": "New Request",
 							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "3",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/GeneralInfo/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"GeneralInfo",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "SupportRequest",
+					"item": [
+						{
+							"name": "getAllSupportRequest",
+							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/SupportRequest/all",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"SupportRequest",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllSupportRequestByEmployeeId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "9",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/SupportRequest/allByEmployeeId/9",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"SupportRequest",
+										"allByEmployeeId",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteSupportRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "8",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/SupportRequest/delete",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"SupportRequest",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllSupportRequestByDepartment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "501c",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/SupportRequest/allByDepartment",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"SupportRequest",
+										"allByDepartment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addNewSupportRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"employeeId\": 9,\r\n    \"date\": \"2022-08-26\",\r\n    \"department\": \"501c\",\r\n    \"reason\": \"Nhin man hinh nho dau mat\",\r\n    \"describe\": \"Muon mot man hinh 1 ty inch\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/SupportRequest/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"SupportRequest",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "editNewSupportRequest Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"supportRequestId\": 2,\r\n        \"employeeId\": \"9\",\r\n        \"date\": \"2022-08-25T17:00:00.000+00:00\",\r\n        \"department\": \"501c\",\r\n        \"approver\": 1,\r\n        \"approveDate\": \"2022-08-25\",\r\n        \"reason\": \"Nhin man hinh nho dau mat\",\r\n        \"directorId\": 1,\r\n        \"money\": 10000,\r\n        \"status\": \"Da xac nhan\",\r\n        \"describe\": \"Muon mot man hinh 1 ty inch\",\r\n        \"approved\": true\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8002/SupportRequest/edit",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"SupportRequest",
+										"edit"
+									]
+								}
 							},
 							"response": []
 						}
