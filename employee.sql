@@ -6,6 +6,7 @@ create table [employee] (
 	[user_name] nvarchar(50),
 	[password] nvarchar(500),
 	[position] nvarchar(50),
+	[salary] money,
 	[leaving_day_balance] tinyint,
 	[address] nvarchar(100),
 	[phone] nvarchar(50),
