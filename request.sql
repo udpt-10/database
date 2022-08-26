@@ -33,7 +33,7 @@ create table [leave_request] (
 	[date] date,
 	[hour] float,
 	[reason] nvarchar(500),
-	[mamager_id] int,
+	[manager_id] int,
 	[is_approved] bit,
 	[approve_reason] nvarchar(500),
 	[approve_date] date
