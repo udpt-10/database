@@ -81,7 +81,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"employeeName\": \"Pham Anh Tien\",\r\n    \"userName\": \"Ki si bong dem 5\",\r\n    \"password\": \"123456\",\r\n    \"position\": \"employee\",\r\n    \"leavingDayBalance\": 12,\r\n    \"address\": \"Nguyen Xien Long Thach My Quan 9 HCM\",\r\n    \"phone\": \"123123123\",\r\n    \"email\": \"kisibongdem5@gmail.com\",\r\n    \"dateOfBirth\": \"2000-12-30T17:00:00.000+00:00\",\r\n    \"sex\": true,\r\n    \"informationSummary\": \"\",\r\n    \"director\": 1,\r\n    \"manager\": 1\r\n}",
+							"raw": "{\r\n    \"employeeName\": \"Pham Anh Tien\",\r\n    \"userName\": \"Ki si bong dem 5\",\r\n    \"password\": \"123456\",\r\n    \"position\": \"employee\",\r\n    \"salary\" : 9500000,\r\n    \"leavingDayBalance\": 12,\r\n    \"address\": \"Nguyen Xien Long Thach My Quan 9 HCM\",\r\n    \"phone\": \"123123123\",\r\n    \"email\": \"kisibongdem5@gmail.com\",\r\n    \"dateOfBirth\": \"2000-12-30T17:00:00.000+00:00\",\r\n    \"sex\": true,\r\n    \"informationSummary\": \"\",\r\n    \"director\": 1,\r\n    \"manager\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
