@@ -2,7 +2,20 @@
 create database requestManager
 use requestManager
 create table [employee] (
-	[employee_id] int primary key,
+	[employee_id] int identity primary key,
+	[employee_name] nvarchar(50),
+	[user_name] nvarchar(50),
+	[password] nvarchar(500),
+	[position] nvarchar(50),
+	[leaving_day_balance] tinyint,
+	[address] nvarchar(100),
+	[phone] nvarchar(50),
+	[email] nvarchar(50),
+	[date_of_birth] date,
+	[sex] bit,
+	[information_summary] nvarchar(500),
+	[director] int,
+	[manager] int,
 )
 
 create table [ot_request] (

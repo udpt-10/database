@@ -1,3 +1,5 @@
+create database employeeManager
+use employeeManager
 create table [employee] (
 	[employee_id] int identity primary key,
 	[employee_name] nvarchar(50),
