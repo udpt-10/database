@@ -58,7 +58,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "patien"
+							"raw": "Ki si bong dem 5"
 						},
 						"url": {
 							"raw": "localhost:8001/employee/findByUserName",
@@ -81,7 +81,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"employeeName\": \"Pham Anh Tien\",\r\n    \"userName\": \"Ki si bong dem 5\",\r\n    \"password\": \"123456\",\r\n    \"position\": \"employee\",\r\n    \"salary\" : 9500000,\r\n    \"leavingDayBalance\": 12,\r\n    \"address\": \"Nguyen Xien Long Thach My Quan 9 HCM\",\r\n    \"phone\": \"123123123\",\r\n    \"email\": \"kisibongdem5@gmail.com\",\r\n    \"dateOfBirth\": \"2000-12-30T17:00:00.000+00:00\",\r\n    \"sex\": true,\r\n    \"informationSummary\": \"\",\r\n    \"director\": 1,\r\n    \"manager\": 1\r\n}",
+							"raw": "{\r\n    \"employeeName\": \"Pham Anh Tien\",\r\n    \"userName\": \"PATIEN3\",\r\n    \"password\": \"123456\",\r\n    \"position\": \"employee\",\r\n    \"salary\" : 9500000,\r\n    \"leavingDayBalance\": 12,\r\n    \"address\": \"Nguyen Xien Long Thach My Quan 9 HCM\",\r\n    \"phone\": \"123123123\",\r\n    \"email\": \"PATIEN3@gmail.com\",\r\n    \"dateOfBirth\": \"2000-12-30T17:00:00.000+00:00\",\r\n    \"sex\": true,\r\n    \"informationSummary\": \"\",\r\n    \"director\": 1,\r\n    \"manager\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -109,7 +109,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"employeeName\": \"Pham Anh Tien\",\r\n    \"userName\": \"Ki si bong dem 2\",\r\n    \"password\": \"123456\",\r\n    \"position\": \"manager\",\r\n    \"leavingDayBalance\": 12,\r\n    \"address\": \"Haha cho khanh\",\r\n    \"phone\": \"123123123\",\r\n    \"email\": \"kisibongdem2@gmail.com\",\r\n    \"dateOfBirth\": \"2000-12-30T17:00:00.000+00:00\",\r\n    \"sex\": false,\r\n    \"informationSummary\": \"\",\r\n    \"director\": 1,\r\n    \"manager\": 1\r\n}",
+							"raw": "{\r\n    \"employeeName\": \"Pham Anh Tien\",\r\n    \"userName\": \"Ki si bong dem 5\",\r\n    \"password\": \"123456\",\r\n    \"position\": \"manager\",\r\n    \"salary\": 9500000.0,\r\n    \"leavingDayBalance\": 12,\r\n    \"address\": \"Haha cho khanh\",\r\n    \"phone\": \"123123123\",\r\n    \"email\": \"kisibongdem5@gmail.com\",\r\n    \"dateOfBirth\": \"2000-12-30T17:00:00.000+00:00\",\r\n    \"sex\": false,\r\n    \"informationSummary\": \"\",\r\n    \"director\": 1,\r\n    \"manager\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -234,7 +234,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"employeeId\":\"9\",\r\n    \"date\": \"2022-08-23\",\r\n    \"hour\": \"8\",\r\n    \"reason\": \"Buồn quá không muốn làm\"\r\n}",
+									"raw": "{\r\n    \"employeeId\":\"3\",\r\n    \"date\": \"2022-08-23\",\r\n    \"hour\": \"8\",\r\n    \"reason\": \"Buồn quá không muốn làm\",\r\n    \"managerId\":1\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -261,14 +261,34 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8002/OTRequest/9",
+									"raw": "localhost:8002/OTRequest/3",
 									"host": [
 										"localhost"
 									],
 									"port": "8002",
 									"path": [
 										"OTRequest",
-										"9"
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllOTRequestByEmployeeId Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/OTRequest/managerId/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"OTRequest",
+										"managerId",
+										"1"
 									]
 								}
 							},
@@ -281,7 +301,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"otRequestId\": 1,\r\n    \"employeeId\": 9,\r\n    \"date\": \"2022-08-22T17:00:00.000+00:00\",\r\n    \"hour\": 8.0,\r\n    \"reason\": \"Buồn quá không muốn làm\",\r\n    \"managerId\": 1,\r\n    \"isApproved\": 1,\r\n    \"approveReason\": \"Thôi cho nó nghỉ Khánh nó đang thất tình\",\r\n    \"approveDate\": \"2022-08-22\"\r\n}",
+									"raw": "{\r\n    \"otRequestId\": 4,\r\n    \"employeeId\": 9,\r\n    \"date\": \"2022-08-22T17:00:00.000+00:00\",\r\n    \"hour\": 8.0,\r\n    \"reason\": \"Buồn quá không muốn làm\",\r\n    \"managerId\": 1,\r\n    \"isApproved\": 1,\r\n    \"approveReason\": \"Thôi cho nó nghỉ Khánh nó đang thất tình\",\r\n    \"approveDate\": \"2022-08-22\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -394,7 +414,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"employeeId\":\"9\",\r\n    \"date\": \"2022-08-23\",\r\n    \"hour\": \"8\",\r\n    \"reason\": \"Hôm qua Khánh đi đái ở vũng tàu bị cua cắp chim nên đi bó chim rồi\"\r\n}",
+									"raw": "{\r\n    \"employeeId\":\"3\",\r\n    \"date\": \"2022-08-23\",\r\n    \"hour\": \"8\",\r\n    \"reason\": \"Hôm qua Khánh đi đái ở vũng tàu bị cua cắp chim nên đi bó chim rồi\",\r\n    \"managerId\":1\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -421,14 +441,34 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8002/LeaveRequest/9",
+									"raw": "localhost:8002/LeaveRequest/3",
 									"host": [
 										"localhost"
 									],
 									"port": "8002",
 									"path": [
 										"LeaveRequest",
-										"9"
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllLeaveByEmployeeId Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/LeaveRequest/managerId/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"LeaveRequest",
+										"managerId",
+										"1"
 									]
 								}
 							},
@@ -521,7 +561,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"employeeId\": 9,\r\n    \"date\": \"2022-08-25\"\r\n}",
+									"raw": "{\r\n    \"employeeId\": 1,\r\n    \"date\": \"2022-08-25\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -863,7 +903,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"employeeId\": 9,\r\n    \"date\": \"2022-08-26\",\r\n    \"department\": \"501c\",\r\n    \"reason\": \"Nhin man hinh nho dau mat\",\r\n    \"describe\": \"Muon mot man hinh 1 ty inch\"\r\n}",
+									"raw": "{\r\n    \"employeeId\": 1,\r\n    \"date\": \"2022-08-26\",\r\n    \"department\": \"501c\",\r\n    \"reason\": \"Nhin man hinh nho dau mat\",\r\n    \"describe\": \"Muon mot man hinh 1 ty inch\",\r\n    \"managerId\":1,\r\n    \"directorId\":1\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
